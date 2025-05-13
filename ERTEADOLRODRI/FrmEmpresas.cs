@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ERTEADOLRODRI
 {
-    public partial class Form1 : Form
+    public partial class FrmEmpresas : Form
     {
-        public Form1()
+        public FrmEmpresas()
         {
             InitializeComponent();
         }
