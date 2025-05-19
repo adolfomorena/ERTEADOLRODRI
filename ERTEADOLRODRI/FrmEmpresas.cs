@@ -24,9 +24,7 @@ namespace ERTEADOLRODRI
 
         private void dataGridEmpresas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            abrirFrmModEmpresa();
-
-            CargarEmpresas();
+            
         }
 
         private void btnAnadir_Click(object sender, EventArgs e)
@@ -127,6 +125,10 @@ namespace ERTEADOLRODRI
             }
         }
 
-       
+        private void dataGridEmpresas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            abrirFrmModEmpresa();
+            CargarEmpresas();
+        }
     }
 }

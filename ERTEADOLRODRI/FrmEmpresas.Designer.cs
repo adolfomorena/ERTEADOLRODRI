@@ -51,6 +51,7 @@
             this.dataGridEmpresas.Size = new System.Drawing.Size(776, 360);
             this.dataGridEmpresas.TabIndex = 0;
             this.dataGridEmpresas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridEmpresas_CellClick);
+            this.dataGridEmpresas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridEmpresas_CellDoubleClick);
             // 
             // btnAnadir
             // 
