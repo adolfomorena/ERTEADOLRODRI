@@ -50,6 +50,35 @@ namespace ERTEADOLRODRI
             FrmModAddEmpresas frmModEmpresa = new FrmModAddEmpresas();
             frmModEmpresa.ShowDialog();
         }
-        
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (dataGridEmpresas.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("No ha seleccionado ninguna empresa", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var empresa = dataGridEmpresas.SelectedRows[0].Cells["CIF"].Value.ToString();
+
+            using (bd_ertesEntities objBD = new bd_ertesEntities())
+            {
+                var empresaSeleccionada = (from emp in objBD.EMPRESAS
+                                           where emp.Cif == empresa
+                                           select emp).FirstOrDefault();
+                if (empresaSeleccionada == null)
+                {
+                    MessageBox.Show("No se ha encontrado la empresa seleccionada", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+
+                FrmModAddEmpresas frmModEmpresa = new FrmModAddEmpresas(
+                    empresaSeleccionada
+                    );
+                frmModEmpresa.ShowDialog();
+            }
+
+        }
     }
 }

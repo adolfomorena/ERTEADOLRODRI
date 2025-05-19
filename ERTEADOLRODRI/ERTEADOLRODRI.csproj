@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComboItem.cs" />
     <Compile Include="EMPLEADOS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
