@@ -48,7 +48,7 @@
             this.sALIRToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(829, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -59,20 +59,20 @@
             this.eMPLEADOSToolStripMenuItem});
             this.aDMINIToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.aDMINIToolStripMenuItem.Name = "aDMINIToolStripMenuItem";
-            this.aDMINIToolStripMenuItem.Size = new System.Drawing.Size(129, 26);
+            this.aDMINIToolStripMenuItem.Size = new System.Drawing.Size(129, 24);
             this.aDMINIToolStripMenuItem.Text = "ADMINISTRAR";
             // 
             // eMPRESASToolStripMenuItem
             // 
             this.eMPRESASToolStripMenuItem.Name = "eMPRESASToolStripMenuItem";
-            this.eMPRESASToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.eMPRESASToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.eMPRESASToolStripMenuItem.Text = "EMPRESAS";
             this.eMPRESASToolStripMenuItem.Click += new System.EventHandler(this.eMPRESASToolStripMenuItem_Click);
             // 
             // eMPLEADOSToolStripMenuItem
             // 
             this.eMPLEADOSToolStripMenuItem.Name = "eMPLEADOSToolStripMenuItem";
-            this.eMPLEADOSToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.eMPLEADOSToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.eMPLEADOSToolStripMenuItem.Text = "EMPLEADOS";
             this.eMPLEADOSToolStripMenuItem.Click += new System.EventHandler(this.eMPLEADOSToolStripMenuItem_Click);
             // 
@@ -80,7 +80,7 @@
             // 
             this.eRTESToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.eRTESToolStripMenuItem.Name = "eRTESToolStripMenuItem";
-            this.eRTESToolStripMenuItem.Size = new System.Drawing.Size(66, 26);
+            this.eRTESToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
             this.eRTESToolStripMenuItem.Text = "ERTES";
             this.eRTESToolStripMenuItem.Click += new System.EventHandler(this.eRTESToolStripMenuItem_Click);
             // 
@@ -88,7 +88,7 @@
             // 
             this.iNFORMESToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.iNFORMESToolStripMenuItem.Name = "iNFORMESToolStripMenuItem";
-            this.iNFORMESToolStripMenuItem.Size = new System.Drawing.Size(99, 26);
+            this.iNFORMESToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
             this.iNFORMESToolStripMenuItem.Text = "INFORMES";
             this.iNFORMESToolStripMenuItem.Click += new System.EventHandler(this.iNFORMESToolStripMenuItem_Click);
             // 
@@ -96,7 +96,7 @@
             // 
             this.sALIRToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.sALIRToolStripMenuItem.Name = "sALIRToolStripMenuItem";
-            this.sALIRToolStripMenuItem.Size = new System.Drawing.Size(65, 26);
+            this.sALIRToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.sALIRToolStripMenuItem.Text = "SALIR";
             this.sALIRToolStripMenuItem.Click += new System.EventHandler(this.sALIRToolStripMenuItem_Click);
             // 
@@ -104,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(829, 486);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
