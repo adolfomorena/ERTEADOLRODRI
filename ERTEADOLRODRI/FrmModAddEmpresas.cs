@@ -65,13 +65,14 @@ namespace ERTEADOLRODRI
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            using (bd_ertesEntities objBD=new bd_ertesEntities())
+            using (bd_ertesEntities objBD = new bd_ertesEntities())
             {
 
-                if(string.IsNullOrEmpty(textBoxDomicilio.Text)||
-                    string.IsNullOrEmpty(textBoxCIF.Text)||
-                        string.IsNullOrEmpty(textBoxNombre.Text)||
-                        string.IsNullOrEmpty(comboBoxSector.Text)){
+                if (string.IsNullOrEmpty(textBoxDomicilio.Text) ||
+                    string.IsNullOrEmpty(textBoxCIF.Text) ||
+                        string.IsNullOrEmpty(textBoxNombre.Text) ||
+                        string.IsNullOrEmpty(comboBoxSector.Text))
+                {
 
                     MessageBox.Show("Debe rellenar todos los campos", "Modificar empresa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
@@ -100,20 +101,21 @@ namespace ERTEADOLRODRI
 
                     EMPRESAS nuevaEmpresa = new EMPRESAS();
                     nuevaEmpresa.Cif = textBoxCIF.Text;
-                    nuevaEmpresa.Nombre=textBoxNombre.Text;
+                    nuevaEmpresa.Nombre = textBoxNombre.Text;
                     nuevaEmpresa.Domicilio = textBoxDomicilio.Text;
                     nuevaEmpresa.Sector = sectorSeleccionado;
 
                     objBD.EMPRESAS.Add(nuevaEmpresa);
                     objBD.SaveChanges();
 
-                    MessageBox.Show("Empresa añadida correctamente", "Añadir empresa", 
-                        MessageBoxButtons.OK, 
+                    MessageBox.Show("Empresa añadida correctamente", "Añadir empresa",
+                        MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
 
                     this.Close();
 
-                }else
+                }
+                else
                 {
                     var sectorSeleccionado = objBD.SECTORES
                                            .Where(x => x.Descripcion == comboBoxSector.Text).
@@ -123,15 +125,22 @@ namespace ERTEADOLRODRI
                     empresaExistente.Domicilio = textBoxDomicilio.Text;
                     empresaExistente.Sector = sectorSeleccionado;
 
-                    objBD.SaveChanges();
-                    MessageBox.Show("Empresa modificada correctamente", "Modificar empresa",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                    this.Close();
-                }
+                    DialogResult rs = MessageBox.Show("¿Guardar cambios?", "Modificar empresa", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    if (rs == DialogResult.No)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        objBD.SaveChanges();
+                        MessageBox.Show("Empresa modificada correctamente", "Modificar empresa",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                        this.Close();
+                    }
 
-            }
-               
+                }
+            }    
         }
         private bool EsCIF(string input)
         {

@@ -52,7 +52,7 @@ namespace ERTEADOLRODRI
                                     join s in objBD.SECTORES on emp.Sector equals s.Id_sector
                                     orderby emp.Nombre
                                     select new
-                                    {
+                                    { 
                                         Nombre_Empresa = emp.Nombre,
                                         Nombre_Sector = s.Descripcion,
                                         CIF = emp.Cif
@@ -81,10 +81,19 @@ namespace ERTEADOLRODRI
                         MessageBox.Show("No se ha encontrado la empresa seleccionada", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-                    objBD.EMPRESAS.Remove(empresaSeleccionada);
-                    objBD.SaveChanges();
-                    MessageBox.Show("La empresa ha sido eliminada correctamente", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    CargarEmpresas();
+                    DialogResult rs = MessageBox.Show("¿Estás seguro?", "Eliminar la empresa", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    if (rs == DialogResult.No)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        objBD.EMPRESAS.Remove(empresaSeleccionada);
+                        objBD.SaveChanges();
+                        MessageBox.Show("La empresa ha sido eliminada correctamente", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CargarEmpresas();
+                    }
+                    
                 }
 
             }
