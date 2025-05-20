@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtbxNombreEmpresa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,13 +43,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.datepickerFechaFinHasta = new System.Windows.Forms.DateTimePicker();
-            this.datepickerFechaFinDesde = new System.Windows.Forms.DateTimePicker();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dataGridERTE = new System.Windows.Forms.DataGridView();
             this.btnNuevoErte = new System.Windows.Forms.Button();
             this.btnFinERTE = new System.Windows.Forms.Button();
+            this.maskedTextBoxFechaFinDesde = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxFechaFinHasta = new System.Windows.Forms.MaskedTextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridERTE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtbxNombreEmpresa
@@ -185,22 +188,6 @@
             this.label8.Text = "Fecha fin desde:";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // datepickerFechaFinHasta
-            // 
-            this.datepickerFechaFinHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datepickerFechaFinHasta.Location = new System.Drawing.Point(596, 187);
-            this.datepickerFechaFinHasta.Name = "datepickerFechaFinHasta";
-            this.datepickerFechaFinHasta.Size = new System.Drawing.Size(169, 22);
-            this.datepickerFechaFinHasta.TabIndex = 14;
-            // 
-            // datepickerFechaFinDesde
-            // 
-            this.datepickerFechaFinDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datepickerFechaFinDesde.Location = new System.Drawing.Point(196, 187);
-            this.datepickerFechaFinDesde.Name = "datepickerFechaFinDesde";
-            this.datepickerFechaFinDesde.Size = new System.Drawing.Size(185, 22);
-            this.datepickerFechaFinDesde.TabIndex = 13;
-            // 
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(358, 230);
@@ -215,8 +202,6 @@
             // 
             this.dataGridERTE.AllowUserToAddRows = false;
             this.dataGridERTE.AllowUserToDeleteRows = false;
-            this.dataGridERTE.AllowUserToResizeColumns = false;
-            this.dataGridERTE.AllowUserToResizeRows = false;
             this.dataGridERTE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridERTE.Location = new System.Drawing.Point(41, 259);
             this.dataGridERTE.MultiSelect = false;
@@ -245,20 +230,43 @@
             this.btnFinERTE.TabIndex = 20;
             this.btnFinERTE.Text = "Fin ERTE";
             this.btnFinERTE.UseVisualStyleBackColor = true;
+            this.btnFinERTE.Click += new System.EventHandler(this.btnFinERTE_Click);
+            // 
+            // maskedTextBoxFechaFinDesde
+            // 
+            this.maskedTextBoxFechaFinDesde.Location = new System.Drawing.Point(196, 192);
+            this.maskedTextBoxFechaFinDesde.Mask = "00/00/0000";
+            this.maskedTextBoxFechaFinDesde.Name = "maskedTextBoxFechaFinDesde";
+            this.maskedTextBoxFechaFinDesde.Size = new System.Drawing.Size(185, 22);
+            this.maskedTextBoxFechaFinDesde.TabIndex = 21;
+            this.maskedTextBoxFechaFinDesde.ValidatingType = typeof(System.DateTime);
+            // 
+            // maskedTextBoxFechaFinHasta
+            // 
+            this.maskedTextBoxFechaFinHasta.Location = new System.Drawing.Point(596, 192);
+            this.maskedTextBoxFechaFinHasta.Mask = "00/00/0000";
+            this.maskedTextBoxFechaFinHasta.Name = "maskedTextBoxFechaFinHasta";
+            this.maskedTextBoxFechaFinHasta.Size = new System.Drawing.Size(167, 22);
+            this.maskedTextBoxFechaFinHasta.TabIndex = 22;
+            this.maskedTextBoxFechaFinHasta.ValidatingType = typeof(System.DateTime);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // FrmERTES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.maskedTextBoxFechaFinHasta);
+            this.Controls.Add(this.maskedTextBoxFechaFinDesde);
             this.Controls.Add(this.btnFinERTE);
             this.Controls.Add(this.btnNuevoErte);
             this.Controls.Add(this.dataGridERTE);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.datepickerFechaFinHasta);
-            this.Controls.Add(this.datepickerFechaFinDesde);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.datepickerFechaInicioHasta);
@@ -276,6 +284,7 @@
             this.Text = "FrmERTES";
             this.Load += new System.EventHandler(this.FrmERTES_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridERTE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,11 +306,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker datepickerFechaFinHasta;
-        private System.Windows.Forms.DateTimePicker datepickerFechaFinDesde;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dataGridERTE;
         private System.Windows.Forms.Button btnNuevoErte;
         private System.Windows.Forms.Button btnFinERTE;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxFechaFinDesde;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxFechaFinHasta;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
