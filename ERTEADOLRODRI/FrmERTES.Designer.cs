@@ -45,10 +45,10 @@
             this.datepickerFechaFinHasta = new System.Windows.Forms.DateTimePicker();
             this.datepickerFechaFinDesde = new System.Windows.Forms.DateTimePicker();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridERTE = new System.Windows.Forms.DataGridView();
             this.btnNuevoErte = new System.Windows.Forms.Button();
             this.btnFinERTE = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridERTE)).BeginInit();
             this.SuspendLayout();
             // 
             // txtbxNombreEmpresa
@@ -203,22 +203,30 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(354, 230);
+            this.btnBuscar.Location = new System.Drawing.Point(358, 230);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 17;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // dataGridView1
+            // dataGridERTE
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(41, 259);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(722, 150);
-            this.dataGridView1.TabIndex = 18;
+            this.dataGridERTE.AllowUserToAddRows = false;
+            this.dataGridERTE.AllowUserToDeleteRows = false;
+            this.dataGridERTE.AllowUserToResizeColumns = false;
+            this.dataGridERTE.AllowUserToResizeRows = false;
+            this.dataGridERTE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridERTE.Location = new System.Drawing.Point(41, 259);
+            this.dataGridERTE.MultiSelect = false;
+            this.dataGridERTE.Name = "dataGridERTE";
+            this.dataGridERTE.ReadOnly = true;
+            this.dataGridERTE.RowHeadersWidth = 51;
+            this.dataGridERTE.RowTemplate.Height = 24;
+            this.dataGridERTE.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridERTE.Size = new System.Drawing.Size(722, 150);
+            this.dataGridERTE.TabIndex = 18;
             // 
             // btnNuevoErte
             // 
@@ -245,7 +253,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnFinERTE);
             this.Controls.Add(this.btnNuevoErte);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridERTE);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
@@ -267,7 +275,7 @@
             this.Name = "FrmERTES";
             this.Text = "FrmERTES";
             this.Load += new System.EventHandler(this.FrmERTES_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridERTE)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,7 +300,7 @@
         private System.Windows.Forms.DateTimePicker datepickerFechaFinHasta;
         private System.Windows.Forms.DateTimePicker datepickerFechaFinDesde;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridERTE;
         private System.Windows.Forms.Button btnNuevoErte;
         private System.Windows.Forms.Button btnFinERTE;
     }
