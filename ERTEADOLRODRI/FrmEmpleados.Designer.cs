@@ -29,21 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmpleados));
             System.Windows.Forms.Label dniLabel;
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label apellidosLabel;
             System.Windows.Forms.Label emailLabel;
             System.Windows.Forms.Label domicilioLabel;
             System.Windows.Forms.Label empresaLabel;
-            this.dsBD = new ERTEADOLRODRI.dsBD();
-            this.eMPLEADOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eMPLEADOSTableAdapter = new ERTEADOLRODRI.dsBDTableAdapters.EMPLEADOSTableAdapter();
-            this.tableAdapterManager = new ERTEADOLRODRI.dsBDTableAdapters.TableAdapterManager();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmpleados));
             this.eMPLEADOSBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.eMPLEADOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsBD = new ERTEADOLRODRI.dsBD();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -52,6 +49,7 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.eMPLEADOSBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.txtDni = new System.Windows.Forms.MaskedTextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -60,49 +58,96 @@
             this.txtDomicilio = new System.Windows.Forms.TextBox();
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.cmbEmpresas = new System.Windows.Forms.ComboBox();
+            this.eMPRESASBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnFoto = new System.Windows.Forms.Button();
+            this.errorEmail = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ofdFoto = new System.Windows.Forms.OpenFileDialog();
+            this.eMPLEADOSTableAdapter = new ERTEADOLRODRI.dsBDTableAdapters.EMPLEADOSTableAdapter();
+            this.tableAdapterManager = new ERTEADOLRODRI.dsBDTableAdapters.TableAdapterManager();
+            this.eMPLEADOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.eMPRESASTableAdapter = new ERTEADOLRODRI.dsBDTableAdapters.EMPRESASTableAdapter();
             dniLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             apellidosLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
             domicilioLabel = new System.Windows.Forms.Label();
             empresaLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dsBD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eMPLEADOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLEADOSBindingNavigator)).BeginInit();
             this.eMPLEADOSBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eMPLEADOSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eMPRESASBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eMPLEADOSBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dsBD
+            // dniLabel
             // 
-            this.dsBD.DataSetName = "dsBD";
-            this.dsBD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            dniLabel.AutoSize = true;
+            dniLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dniLabel.Location = new System.Drawing.Point(94, 119);
+            dniLabel.Name = "dniLabel";
+            dniLabel.Size = new System.Drawing.Size(44, 20);
+            dniLabel.TabIndex = 1;
+            dniLabel.Text = "Dni:";
             // 
-            // eMPLEADOSBindingSource
+            // nombreLabel
             // 
-            this.eMPLEADOSBindingSource.DataMember = "EMPLEADOS";
-            this.eMPLEADOSBindingSource.DataSource = this.dsBD;
+            nombreLabel.AutoSize = true;
+            nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nombreLabel.Location = new System.Drawing.Point(94, 163);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(80, 20);
+            nombreLabel.TabIndex = 3;
+            nombreLabel.Text = "Nombre:";
             // 
-            // eMPLEADOSTableAdapter
+            // apellidosLabel
             // 
-            this.eMPLEADOSTableAdapter.ClearBeforeFill = true;
+            apellidosLabel.AutoSize = true;
+            apellidosLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            apellidosLabel.Location = new System.Drawing.Point(94, 213);
+            apellidosLabel.Name = "apellidosLabel";
+            apellidosLabel.Size = new System.Drawing.Size(92, 20);
+            apellidosLabel.TabIndex = 5;
+            apellidosLabel.Text = "Apellidos:";
             // 
-            // tableAdapterManager
+            // emailLabel
             // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.EMPLEADOSTableAdapter = this.eMPLEADOSTableAdapter;
-            this.tableAdapterManager.EMPRESASTableAdapter = null;
-            this.tableAdapterManager.ERTESTableAdapter = null;
-            this.tableAdapterManager.SECTORESTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = ERTEADOLRODRI.dsBDTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            emailLabel.AutoSize = true;
+            emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            emailLabel.Location = new System.Drawing.Point(94, 257);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(62, 20);
+            emailLabel.TabIndex = 7;
+            emailLabel.Text = "Email:";
+            // 
+            // domicilioLabel
+            // 
+            domicilioLabel.AutoSize = true;
+            domicilioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            domicilioLabel.Location = new System.Drawing.Point(94, 303);
+            domicilioLabel.Name = "domicilioLabel";
+            domicilioLabel.Size = new System.Drawing.Size(94, 20);
+            domicilioLabel.TabIndex = 9;
+            domicilioLabel.Text = "Domicilio:";
+            // 
+            // empresaLabel
+            // 
+            empresaLabel.AutoSize = true;
+            empresaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            empresaLabel.Location = new System.Drawing.Point(94, 346);
+            empresaLabel.Name = "empresaLabel";
+            empresaLabel.Size = new System.Drawing.Size(89, 20);
+            empresaLabel.TabIndex = 13;
+            empresaLabel.Text = "Empresa:";
             // 
             // eMPLEADOSBindingNavigator
             // 
             this.eMPLEADOSBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
             this.eMPLEADOSBindingNavigator.BindingSource = this.eMPLEADOSBindingSource;
             this.eMPLEADOSBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.eMPLEADOSBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.eMPLEADOSBindingNavigator.DeleteItem = null;
             this.eMPLEADOSBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.eMPLEADOSBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
@@ -137,21 +182,22 @@
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
             // 
+            // eMPLEADOSBindingSource
+            // 
+            this.eMPLEADOSBindingSource.DataMember = "EMPLEADOS";
+            this.eMPLEADOSBindingSource.DataSource = this.dsBD;
+            // 
+            // dsBD
+            // 
+            this.dsBD.DataSetName = "dsBD";
+            this.dsBD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -214,6 +260,16 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Text = "Eliminar";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
+            // 
             // eMPLEADOSBindingNavigatorSaveItem
             // 
             this.eMPLEADOSBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -221,17 +277,7 @@
             this.eMPLEADOSBindingNavigatorSaveItem.Name = "eMPLEADOSBindingNavigatorSaveItem";
             this.eMPLEADOSBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
             this.eMPLEADOSBindingNavigatorSaveItem.Text = "Guardar datos";
-            this.eMPLEADOSBindingNavigatorSaveItem.Click += new System.EventHandler(this.eMPLEADOSBindingNavigatorSaveItem_Click_2);
-            // 
-            // dniLabel
-            // 
-            dniLabel.AutoSize = true;
-            dniLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dniLabel.Location = new System.Drawing.Point(94, 119);
-            dniLabel.Name = "dniLabel";
-            dniLabel.Size = new System.Drawing.Size(44, 20);
-            dniLabel.TabIndex = 1;
-            dniLabel.Text = "Dni:";
+            this.eMPLEADOSBindingNavigatorSaveItem.Click += new System.EventHandler(this.eMPLEADOSBindingNavigatorSaveItem_Click);
             // 
             // txtDni
             // 
@@ -241,16 +287,7 @@
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(151, 22);
             this.txtDni.TabIndex = 2;
-            // 
-            // nombreLabel
-            // 
-            nombreLabel.AutoSize = true;
-            nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombreLabel.Location = new System.Drawing.Point(94, 163);
-            nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(80, 20);
-            nombreLabel.TabIndex = 3;
-            nombreLabel.Text = "Nombre:";
+            this.txtDni.Validating += new System.ComponentModel.CancelEventHandler(this.txtDni_Validating);
             // 
             // txtNombre
             // 
@@ -260,16 +297,6 @@
             this.txtNombre.Size = new System.Drawing.Size(286, 22);
             this.txtNombre.TabIndex = 4;
             // 
-            // apellidosLabel
-            // 
-            apellidosLabel.AutoSize = true;
-            apellidosLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            apellidosLabel.Location = new System.Drawing.Point(94, 213);
-            apellidosLabel.Name = "apellidosLabel";
-            apellidosLabel.Size = new System.Drawing.Size(92, 20);
-            apellidosLabel.TabIndex = 5;
-            apellidosLabel.Text = "Apellidos:";
-            // 
             // txtApellidos
             // 
             this.txtApellidos.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLEADOSBindingSource, "Apellidos", true));
@@ -278,16 +305,6 @@
             this.txtApellidos.Size = new System.Drawing.Size(286, 22);
             this.txtApellidos.TabIndex = 6;
             // 
-            // emailLabel
-            // 
-            emailLabel.AutoSize = true;
-            emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            emailLabel.Location = new System.Drawing.Point(94, 257);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(62, 20);
-            emailLabel.TabIndex = 7;
-            emailLabel.Text = "Email:";
-            // 
             // txtEmail
             // 
             this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLEADOSBindingSource, "Email", true));
@@ -295,16 +312,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(286, 22);
             this.txtEmail.TabIndex = 8;
-            // 
-            // domicilioLabel
-            // 
-            domicilioLabel.AutoSize = true;
-            domicilioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            domicilioLabel.Location = new System.Drawing.Point(94, 303);
-            domicilioLabel.Name = "domicilioLabel";
-            domicilioLabel.Size = new System.Drawing.Size(94, 20);
-            domicilioLabel.TabIndex = 9;
-            domicilioLabel.Text = "Domicilio:";
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // txtDomicilio
             // 
@@ -320,27 +328,26 @@
             this.pbFoto.Location = new System.Drawing.Point(557, 115);
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.Size = new System.Drawing.Size(294, 251);
+            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFoto.TabIndex = 12;
             this.pbFoto.TabStop = false;
             // 
-            // empresaLabel
-            // 
-            empresaLabel.AutoSize = true;
-            empresaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            empresaLabel.Location = new System.Drawing.Point(94, 346);
-            empresaLabel.Name = "empresaLabel";
-            empresaLabel.Size = new System.Drawing.Size(89, 20);
-            empresaLabel.TabIndex = 13;
-            empresaLabel.Text = "Empresa:";
-            // 
             // cmbEmpresas
             // 
-            this.cmbEmpresas.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLEADOSBindingSource, "Empresa", true));
+            this.cmbEmpresas.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.eMPLEADOSBindingSource, "Empresa", true));
+            this.cmbEmpresas.DataSource = this.eMPRESASBindingSource;
+            this.cmbEmpresas.DisplayMember = "Nombre";
             this.cmbEmpresas.FormattingEnabled = true;
             this.cmbEmpresas.Location = new System.Drawing.Point(203, 342);
             this.cmbEmpresas.Name = "cmbEmpresas";
             this.cmbEmpresas.Size = new System.Drawing.Size(286, 24);
             this.cmbEmpresas.TabIndex = 14;
+            this.cmbEmpresas.ValueMember = "Cif";
+            // 
+            // eMPRESASBindingSource
+            // 
+            this.eMPRESASBindingSource.DataMember = "EMPRESAS";
+            this.eMPRESASBindingSource.DataSource = this.dsBD;
             // 
             // btnFoto
             // 
@@ -351,6 +358,37 @@
             this.btnFoto.TabIndex = 15;
             this.btnFoto.Text = "CAMBAIR FOTO";
             this.btnFoto.UseVisualStyleBackColor = true;
+            this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
+            // 
+            // errorEmail
+            // 
+            this.errorEmail.ContainerControl = this;
+            // 
+            // ofdFoto
+            // 
+            this.ofdFoto.FileName = "openFileDialog1";
+            // 
+            // eMPLEADOSTableAdapter
+            // 
+            this.eMPLEADOSTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.EMPLEADOSTableAdapter = this.eMPLEADOSTableAdapter;
+            this.tableAdapterManager.EMPRESASTableAdapter = null;
+            this.tableAdapterManager.ERTESTableAdapter = null;
+            this.tableAdapterManager.SECTORESTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = ERTEADOLRODRI.dsBDTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // eMPLEADOSBindingSource1
+            // 
+            this.eMPLEADOSBindingSource1.DataMember = "EMPLEADOS";
+            this.eMPLEADOSBindingSource1.DataSource = this.dsBD;
+            // 
+            // eMPRESASTableAdapter
+            // 
+            this.eMPRESASTableAdapter.ClearBeforeFill = true;
             // 
             // FrmEmpleados
             // 
@@ -376,12 +414,15 @@
             this.Name = "FrmEmpleados";
             this.Text = "FrmEmpleados";
             this.Load += new System.EventHandler(this.FrmEmpleados_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dsBD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eMPLEADOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLEADOSBindingNavigator)).EndInit();
             this.eMPLEADOSBindingNavigator.ResumeLayout(false);
             this.eMPLEADOSBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eMPLEADOSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eMPRESASBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eMPLEADOSBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,5 +455,10 @@
         private System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.ComboBox cmbEmpresas;
         private System.Windows.Forms.Button btnFoto;
+        private System.Windows.Forms.ErrorProvider errorEmail;
+        private System.Windows.Forms.OpenFileDialog ofdFoto;
+        private System.Windows.Forms.BindingSource eMPLEADOSBindingSource1;
+        private System.Windows.Forms.BindingSource eMPRESASBindingSource;
+        private dsBDTableAdapters.EMPRESASTableAdapter eMPRESASTableAdapter;
     }
 }
