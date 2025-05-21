@@ -21,6 +21,15 @@ namespace ERTEADOLRODRI
             buscarDatos();
         }
 
+        private void btnNuevoErte_Click(object sender, EventArgs e)
+        {
+            FrmNuevoERTE nuevoERTE = new FrmNuevoERTE();
+            nuevoERTE.ShowDialog();
+
+            buscarDatos();
+
+        }
+
         private void btnFinERTE_Click(object sender, EventArgs e)
         {
             using (bd_ertesEntities objBD = new bd_ertesEntities())
@@ -215,7 +224,7 @@ namespace ERTEADOLRODRI
 
         }
 
-
+        
     }    
 }
 

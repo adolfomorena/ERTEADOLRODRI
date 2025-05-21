@@ -221,6 +221,7 @@
             this.btnNuevoErte.TabIndex = 19;
             this.btnNuevoErte.Text = "Nuevo ERTE";
             this.btnNuevoErte.UseVisualStyleBackColor = true;
+            this.btnNuevoErte.Click += new System.EventHandler(this.btnNuevoErte_Click);
             // 
             // btnFinERTE
             // 

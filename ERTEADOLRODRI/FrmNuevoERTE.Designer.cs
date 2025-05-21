@@ -28,12 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lblEmpresa = new System.Windows.Forms.Label();
+            this.cmbEmpresas = new System.Windows.Forms.ComboBox();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // lblEmpresa
+            // 
+            this.lblEmpresa.AutoSize = true;
+            this.lblEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpresa.Location = new System.Drawing.Point(169, 101);
+            this.lblEmpresa.Name = "lblEmpresa";
+            this.lblEmpresa.Size = new System.Drawing.Size(97, 20);
+            this.lblEmpresa.TabIndex = 0;
+            this.lblEmpresa.Text = "EMPRESA";
+            // 
+            // cmbEmpresas
+            // 
+            this.cmbEmpresas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEmpresas.FormattingEnabled = true;
+            this.cmbEmpresas.Location = new System.Drawing.Point(302, 98);
+            this.cmbEmpresas.Name = "cmbEmpresas";
+            this.cmbEmpresas.Size = new System.Drawing.Size(234, 28);
+            this.cmbEmpresas.TabIndex = 1;
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Location = new System.Drawing.Point(152, 313);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(129, 55);
+            this.btnVolver.TabIndex = 2;
+            this.btnVolver.Text = "VOLVER";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Location = new System.Drawing.Point(407, 313);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(129, 55);
+            this.btnAceptar.TabIndex = 3;
+            this.btnAceptar.Text = "ACEPTAR";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            // 
+            // FrmNuevoERTE
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(693, 522);
+            this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.btnVolver);
+            this.Controls.Add(this.cmbEmpresas);
+            this.Controls.Add(this.lblEmpresa);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FrmNuevoERTE";
             this.Text = "FrmNuevoERTE";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lblEmpresa;
+        private System.Windows.Forms.ComboBox cmbEmpresas;
+        private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Button btnAceptar;
     }
 }
