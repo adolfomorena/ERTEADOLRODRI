@@ -21,5 +21,25 @@ namespace ERTEADOLRODRI
         {
             this.Close();
         }
+
+        private void FrmNuevoERTE_Load(object sender, EventArgs e)
+        {
+            using (bd_ertesEntities objBD = new bd_ertesEntities())
+            {
+                var qEmpresas = from emp in objBD.EMPRESAS
+                                where !(objBD.ERTES.Any(erte => erte.Empresa == emp.Cif && erte.Fecha_fin == null))
+                                orderby emp.Nombre
+                                select emp;
+
+                foreach (var emp in qEmpresas)
+                {
+                    ComboItem item = new ComboItem();
+                    item.Text = emp.Nombre;
+                    item.Value = emp.Cif;
+
+                    cmbEmpresas.Items.Add(item);
+                }
+            }
+        }
     }
 }

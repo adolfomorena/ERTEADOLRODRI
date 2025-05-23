@@ -37,10 +37,10 @@
             // lblEmpresa
             // 
             this.lblEmpresa.AutoSize = true;
-            this.lblEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpresa.Location = new System.Drawing.Point(169, 101);
+            this.lblEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpresa.Location = new System.Drawing.Point(148, 135);
             this.lblEmpresa.Name = "lblEmpresa";
-            this.lblEmpresa.Size = new System.Drawing.Size(97, 20);
+            this.lblEmpresa.Size = new System.Drawing.Size(116, 25);
             this.lblEmpresa.TabIndex = 0;
             this.lblEmpresa.Text = "EMPRESA";
             // 
@@ -48,9 +48,9 @@
             // 
             this.cmbEmpresas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEmpresas.FormattingEnabled = true;
-            this.cmbEmpresas.Location = new System.Drawing.Point(302, 98);
+            this.cmbEmpresas.Location = new System.Drawing.Point(283, 135);
             this.cmbEmpresas.Name = "cmbEmpresas";
-            this.cmbEmpresas.Size = new System.Drawing.Size(234, 28);
+            this.cmbEmpresas.Size = new System.Drawing.Size(253, 28);
             this.cmbEmpresas.TabIndex = 1;
             // 
             // btnVolver
@@ -86,6 +86,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmNuevoERTE";
             this.Text = "FrmNuevoERTE";
+            this.Load += new System.EventHandler(this.FrmNuevoERTE_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
