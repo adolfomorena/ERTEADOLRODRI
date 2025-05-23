@@ -41,5 +41,34 @@ namespace ERTEADOLRODRI
                 }
             }
         }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            if (cmbEmpresas.SelectedItem != null)
+            {
+                // Obtenemos el CIF de la empresa seleccionada desde ComboItem
+                ComboItem itemSeleccionado = (ComboItem)cmbEmpresas.SelectedItem;
+                string cifEmpresa = (string)itemSeleccionado.Value;
+
+                using (bd_ertesEntities objBD = new bd_ertesEntities())
+                {
+                    var nuevoERTE = new ERTES
+                    {
+                        Empresa = cifEmpresa,
+                        Fecha_inicio = DateTime.Now,
+                        Fecha_fin = null
+                    };
+                    objBD.ERTES.Add(nuevoERTE);
+                    objBD.SaveChanges();
+                }
+
+                MessageBox.Show("Nuevo ERTE creado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No se seleccionó ninguna Empresa.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
