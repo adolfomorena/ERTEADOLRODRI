@@ -43,10 +43,15 @@ namespace ERTEADOLRODRI
                                         Id_Sector = s.Id_sector,
                                         Descripcion = s.Descripcion
                                     };
-                foreach (var item in listaSectores)
+                foreach (var sector in listaSectores)
                 {
-                    comboBoxSector.Items.Add(new ComboItem(item.Descripcion, item.Id_Sector));
+                    ComboItem item = new ComboItem();
+                    item.Text = sector.Descripcion;
+                    item.Value = sector.Id_Sector;
+
+                    comboBoxSector.Items.Add(item);
                 }
+
                 if (empresaSeleccionada != null)
                 {
                     var nombreEmpresaSeleccionada = objBD.SECTORES.
