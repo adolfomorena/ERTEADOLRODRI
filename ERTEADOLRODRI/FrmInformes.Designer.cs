@@ -101,11 +101,11 @@
             // 
             this.dgvConsultas.AllowUserToAddRows = false;
             this.dgvConsultas.AllowUserToDeleteRows = false;
-            this.dgvConsultas.AutoGenerateColumns = false;
+            this.dgvConsultas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultas.DataSource = this.dsBDBindingSource;
             this.dgvConsultas.Location = new System.Drawing.Point(53, 132);
             this.dgvConsultas.Name = "dgvConsultas";
+            this.dgvConsultas.ReadOnly = true;
             this.dgvConsultas.RowHeadersWidth = 51;
             this.dgvConsultas.RowTemplate.Height = 24;
             this.dgvConsultas.Size = new System.Drawing.Size(739, 341);
