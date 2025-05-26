@@ -103,6 +103,12 @@
     <Compile Include="FrmModAddEmpresas.Designer.cs">
       <DependentUpon>FrmModAddEmpresas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmNuevoERTE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNuevoERTE.Designer.cs">
+      <DependentUpon>FrmNuevoERTE.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmModAddEmpresas.resx">
       <DependentUpon>FrmModAddEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNuevoERTE.resx">
+      <DependentUpon>FrmNuevoERTE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>

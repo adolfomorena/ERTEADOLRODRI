@@ -8,16 +8,12 @@ namespace ERTEADOLRODRI
 {
     public class ComboItem
     {
-        public string Name { get; set; }
-        public int Value { get; set; }
-        public ComboItem(string name, int value) {
+        public string Text { get; set; }
+        public object Value { get; set; }
 
-            Name = name;
-            Value = value;
-        }
         public override string ToString()
         {
-            return Name;
+            return Text;
         }
     }
 }
