@@ -53,16 +53,16 @@
             // 
             // txtbxNombreEmpresa
             // 
-            this.txtbxNombreEmpresa.Location = new System.Drawing.Point(177, 33);
+            this.txtbxNombreEmpresa.Location = new System.Drawing.Point(193, 33);
             this.txtbxNombreEmpresa.Name = "txtbxNombreEmpresa";
-            this.txtbxNombreEmpresa.Size = new System.Drawing.Size(204, 22);
+            this.txtbxNombreEmpresa.Size = new System.Drawing.Size(188, 22);
             this.txtbxNombreEmpresa.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(38, 35);
+            this.label1.Location = new System.Drawing.Point(27, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 16);
             this.label1.TabIndex = 2;
@@ -73,7 +73,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(428, 37);
+            this.label2.Location = new System.Drawing.Point(405, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 16);
             this.label2.TabIndex = 3;
@@ -82,23 +82,23 @@
             // 
             // txtbxNombreSector
             // 
-            this.txtbxNombreSector.Location = new System.Drawing.Point(557, 35);
+            this.txtbxNombreSector.Location = new System.Drawing.Point(574, 33);
             this.txtbxNombreSector.Name = "txtbxNombreSector";
-            this.txtbxNombreSector.Size = new System.Drawing.Size(204, 22);
+            this.txtbxNombreSector.Size = new System.Drawing.Size(189, 22);
             this.txtbxNombreSector.TabIndex = 4;
             // 
             // txtbxEmpleadoHasta
             // 
-            this.txtbxEmpleadoHasta.Location = new System.Drawing.Point(596, 93);
+            this.txtbxEmpleadoHasta.Location = new System.Drawing.Point(574, 91);
             this.txtbxEmpleadoHasta.Name = "txtbxEmpleadoHasta";
-            this.txtbxEmpleadoHasta.Size = new System.Drawing.Size(165, 22);
+            this.txtbxEmpleadoHasta.Size = new System.Drawing.Size(189, 22);
             this.txtbxEmpleadoHasta.TabIndex = 8;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(422, 91);
+            this.label3.Location = new System.Drawing.Point(405, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(153, 16);
             this.label3.TabIndex = 7;
@@ -118,28 +118,28 @@
             // 
             // txtbxEmpleadoDesde
             // 
-            this.txtbxEmpleadoDesde.Location = new System.Drawing.Point(196, 91);
+            this.txtbxEmpleadoDesde.Location = new System.Drawing.Point(193, 91);
             this.txtbxEmpleadoDesde.Name = "txtbxEmpleadoDesde";
-            this.txtbxEmpleadoDesde.Size = new System.Drawing.Size(185, 22);
+            this.txtbxEmpleadoDesde.Size = new System.Drawing.Size(188, 22);
             this.txtbxEmpleadoDesde.TabIndex = 5;
             // 
             // datepickerFechaInicioDesde
             // 
             this.datepickerFechaInicioDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datepickerFechaInicioDesde.Location = new System.Drawing.Point(196, 147);
+            this.datepickerFechaInicioDesde.Location = new System.Drawing.Point(193, 147);
             this.datepickerFechaInicioDesde.Name = "datepickerFechaInicioDesde";
             this.datepickerFechaInicioDesde.ShowCheckBox = true;
-            this.datepickerFechaInicioDesde.Size = new System.Drawing.Size(185, 22);
+            this.datepickerFechaInicioDesde.Size = new System.Drawing.Size(188, 22);
             this.datepickerFechaInicioDesde.TabIndex = 9;
             this.datepickerFechaInicioDesde.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // datepickerFechaInicioHasta
             // 
             this.datepickerFechaInicioHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datepickerFechaInicioHasta.Location = new System.Drawing.Point(576, 145);
+            this.datepickerFechaInicioHasta.Location = new System.Drawing.Point(574, 143);
             this.datepickerFechaInicioHasta.Name = "datepickerFechaInicioHasta";
             this.datepickerFechaInicioHasta.ShowCheckBox = true;
-            this.datepickerFechaInicioHasta.Size = new System.Drawing.Size(185, 22);
+            this.datepickerFechaInicioHasta.Size = new System.Drawing.Size(189, 22);
             this.datepickerFechaInicioHasta.TabIndex = 10;
             this.datepickerFechaInicioHasta.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
@@ -147,7 +147,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(27, 151);
+            this.label5.Location = new System.Drawing.Point(27, 147);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(143, 16);
             this.label5.TabIndex = 11;
@@ -158,7 +158,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(422, 145);
+            this.label6.Location = new System.Drawing.Point(405, 147);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(137, 16);
             this.label6.TabIndex = 12;
@@ -169,7 +169,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(428, 192);
+            this.label7.Location = new System.Drawing.Point(405, 192);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(116, 16);
             this.label7.TabIndex = 16;
@@ -235,19 +235,19 @@
             // dtpFechaFinDesde
             // 
             this.dtpFechaFinDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaFinDesde.Location = new System.Drawing.Point(196, 192);
+            this.dtpFechaFinDesde.Location = new System.Drawing.Point(193, 192);
             this.dtpFechaFinDesde.Name = "dtpFechaFinDesde";
             this.dtpFechaFinDesde.ShowCheckBox = true;
-            this.dtpFechaFinDesde.Size = new System.Drawing.Size(185, 22);
+            this.dtpFechaFinDesde.Size = new System.Drawing.Size(188, 22);
             this.dtpFechaFinDesde.TabIndex = 21;
             // 
             // dtpFechaFinHasta
             // 
             this.dtpFechaFinHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaFinHasta.Location = new System.Drawing.Point(576, 192);
+            this.dtpFechaFinHasta.Location = new System.Drawing.Point(574, 190);
             this.dtpFechaFinHasta.Name = "dtpFechaFinHasta";
             this.dtpFechaFinHasta.ShowCheckBox = true;
-            this.dtpFechaFinHasta.Size = new System.Drawing.Size(185, 22);
+            this.dtpFechaFinHasta.Size = new System.Drawing.Size(189, 22);
             this.dtpFechaFinHasta.TabIndex = 22;
             // 
             // FrmERTES

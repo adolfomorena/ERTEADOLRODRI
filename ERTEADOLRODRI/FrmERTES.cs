@@ -16,6 +16,12 @@ namespace ERTEADOLRODRI
         {
             InitializeComponent();
         }
+
+        private void FrmERTES_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             buscarDatos();
@@ -37,18 +43,25 @@ namespace ERTEADOLRODRI
                     string cif = dataGridERTE.SelectedRows[0].Cells[1].Value.ToString();
                     var erteSeleccionado = (objBD.ERTES.Where(
                        x => x.Empresa.Equals(cif))).FirstOrDefault();
-                    if (erteSeleccionado != null)
+
+                    if (erteSeleccionado.Fecha_fin == null)
                     {
-                        DialogResult resultado = MessageBox.Show("¿Está seguro de que desea finalizar el ERTE?", "Finalizar ERTE", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult resultado = MessageBox.Show("¿Está seguro de que desea finalizar el ERTE?", "Finalizar ERTE",
+                            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (resultado == DialogResult.Yes)
                         {
                             erteSeleccionado.Fecha_fin = DateTime.Now;
                             objBD.SaveChanges();
                             MessageBox.Show("ERTE finalizado correctamente");
+
                             buscarDatos();
                         }
                     }
-                    
+                    else
+                    {
+                        MessageBox.Show("El ERTE ya ha sido finalizado");
+                    }
+
                 }
                 else
                 {
@@ -120,28 +133,6 @@ namespace ERTEADOLRODRI
             }
         }
 
-        //private void cargarTodosLosERTES()
-        //{
-        //    using (bd_ertesEntities db = new bd_ertesEntities())
-        //    {
-        //        var lista = from ert in db.ERTES
-        //                    join emp in db.EMPRESAS on ert.Empresa equals emp.Cif
-        //                    join s in db.SECTORES on emp.Sector equals s.Id_sector
-        //                    select new
-        //                    {
-        //                        Nombre_Empresa = emp.Nombre,
-        //                        CIF = emp.Cif,
-        //                        Nombre_Sector = s.Descripcion,
-        //                        N_Empleados = db.EMPLEADOS.Count(x => x.Empresa == emp.Cif),
-        //                        F_Inicio = ert.Fecha_inicio,
-        //                        F_Fin = ert.Fecha_fin
-        //                    };
-
-        //        dataGridERTE.DataSource = lista.ToList();
-        //    }
-        //}
-
-
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
@@ -177,10 +168,7 @@ namespace ERTEADOLRODRI
 
         }
 
-        private void FrmERTES_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void label3_Click(object sender, EventArgs e)
         {
