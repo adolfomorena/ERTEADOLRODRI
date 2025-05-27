@@ -27,9 +27,11 @@ namespace ERTEADOLRODRI
             using (bd_ertesEntities objBD = new bd_ertesEntities())
             {
                 var qEmpresas = from emp in objBD.EMPRESAS
-                                where !(objBD.ERTES.Any(erte => erte.Empresa == emp.Cif && erte.Fecha_fin != null))
+                                where !emp.ERTES.Any(x => x.Fecha_fin == null)
                                 orderby emp.Nombre
                                 select emp;
+
+                cmbEmpresas.Items.Clear();
 
                 foreach (var emp in qEmpresas)
                 {
