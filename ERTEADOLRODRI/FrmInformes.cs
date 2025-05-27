@@ -105,7 +105,28 @@ namespace ERTEADOLRODRI
 
         private void btnConsulta4_Click(object sender, EventArgs e)
         {
+            using (bd_ertesEntities objBD = new bd_ertesEntities())
+            {
+                var fechaMin = objBD.ERTES.Min(ert => ert.Fecha_inicio);
 
+                var consulta4 = (from emp in objBD.EMPRESAS
+                                 join ert in objBD.ERTES on emp.Cif equals ert.Empresa
+                                 where ert.Fecha_inicio == fechaMin
+                                 select new
+                                 {
+                                     emp.Nombre,
+                                     emp.Cif,
+                                 }).ToList();
+
+                if (consulta4.Any())
+                {
+                    dgvConsultas.DataSource = consulta4;
+                }
+                else
+                {
+                    MessageBox.Show("No hay ERTES registrados en ninguna empresa.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
 
         private void btnConsulta5_Click(object sender, EventArgs e)
