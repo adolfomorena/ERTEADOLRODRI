@@ -22,15 +22,15 @@ namespace ERTEADOLRODRI
             using (bd_ertesEntities objBD = new bd_ertesEntities())
             {
                 var qConsulta1 = (from emp in objBD.EMPRESAS
-                                 where emp.ERTES.Any()
-                                 let numEmple = emp.EMPLEADOS.Count()
-                                 orderby numEmple descending
-                                 select new
-                                 {
-                                     emp.Nombre,
-                                     emp.Cif,
-                                     NumEmpleados = numEmple,
-                                 }).ToList();
+                                  where emp.ERTES.Any()
+                                  let numEmple = emp.EMPLEADOS.Count()
+                                  orderby numEmple descending
+                                  select new
+                                  {
+                                      emp.Nombre,
+                                      emp.Cif,
+                                      NumEmpleados = numEmple,
+                                  }).ToList();
 
                 if (qConsulta1.Any())
                 {
@@ -131,7 +131,30 @@ namespace ERTEADOLRODRI
 
         private void btnConsulta5_Click(object sender, EventArgs e)
         {
+            using (bd_ertesEntities objBD = new bd_ertesEntities())
+            {
 
+                var consulta5 = (from emp in objBD.EMPRESAS
+                                 where emp.ERTES.Any(ert => ert.Fecha_fin == null)
+                                 select new
+                                 {
+                                     numero_Empleados = emp.EMPLEADOS.Count(),
+                                 }).ToList();
+
+
+                if (consulta5.Any())
+                {
+                    int numTotalEmple= consulta5.Sum(x => x.numero_Empleados);
+                    dgvConsultas.DataSource = new List<object>
+                    {
+                        new { TotalEmpleados = numTotalEmple }
+                    };
+                }
+                else
+                {
+                    MessageBox.Show("No hay ERTES activos en ninguna empresa.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }
