@@ -22,15 +22,15 @@ namespace ERTEADOLRODRI
             using (bd_ertesEntities objBD = new bd_ertesEntities())
             {
                 var qConsulta1 = (from emp in objBD.EMPRESAS
-                                 where emp.ERTES.Any()
-                                 let numEmple = emp.EMPLEADOS.Count()
-                                 orderby numEmple descending
-                                 select new
-                                 {
-                                     emp.Nombre,
-                                     emp.Cif,
-                                     NumEmpleados = numEmple,
-                                 }).ToList();
+                                  where emp.ERTES.Any()
+                                  let numEmple = emp.EMPLEADOS.Count()
+                                  orderby numEmple descending
+                                  select new
+                                  {
+                                      emp.Nombre,
+                                      emp.Cif,
+                                      NumEmpleados = numEmple,
+                                  }).ToList();
 
                 if (qConsulta1.Any())
                 {
@@ -105,12 +105,56 @@ namespace ERTEADOLRODRI
 
         private void btnConsulta4_Click(object sender, EventArgs e)
         {
+            using (bd_ertesEntities objBD = new bd_ertesEntities())
+            {
+                var fechaMin = objBD.ERTES.Min(ert => ert.Fecha_inicio);
 
+                var consulta4 = (from emp in objBD.EMPRESAS
+                                 join ert in objBD.ERTES on emp.Cif equals ert.Empresa
+                                 where ert.Fecha_inicio == fechaMin
+                                 select new
+                                 {
+                                     emp.Nombre,
+                                     emp.Cif,
+                                 }).ToList();
+
+                if (consulta4.Any())
+                {
+                    dgvConsultas.DataSource = consulta4;
+                }
+                else
+                {
+                    MessageBox.Show("No hay ERTES registrados en ninguna empresa.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
 
         private void btnConsulta5_Click(object sender, EventArgs e)
         {
+            using (bd_ertesEntities objBD = new bd_ertesEntities())
+            {
 
+                var consulta5 = (from emp in objBD.EMPRESAS
+                                 where emp.ERTES.Any(ert => ert.Fecha_fin == null)
+                                 select new
+                                 {
+                                     numero_Empleados = emp.EMPLEADOS.Count(),
+                                 }).ToList();
+
+
+                if (consulta5.Any())
+                {
+                    int numTotalEmple= consulta5.Sum(x => x.numero_Empleados);
+                    dgvConsultas.DataSource = new List<object>
+                    {
+                        new { TotalEmpleados = numTotalEmple }
+                    };
+                }
+                else
+                {
+                    MessageBox.Show("No hay ERTES activos en ninguna empresa.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }
