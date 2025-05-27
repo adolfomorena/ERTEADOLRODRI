@@ -53,18 +53,19 @@
             // 
             // txtbxNombreEmpresa
             // 
-            this.txtbxNombreEmpresa.Location = new System.Drawing.Point(193, 33);
+            this.txtbxNombreEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxNombreEmpresa.Location = new System.Drawing.Point(238, 47);
             this.txtbxNombreEmpresa.Name = "txtbxNombreEmpresa";
-            this.txtbxNombreEmpresa.Size = new System.Drawing.Size(188, 22);
+            this.txtbxNombreEmpresa.Size = new System.Drawing.Size(177, 24);
             this.txtbxNombreEmpresa.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 36);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(41, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 16);
+            this.label1.Size = new System.Drawing.Size(143, 18);
             this.label1.TabIndex = 2;
             this.label1.Text = "Nombre empresa:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -72,35 +73,37 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(405, 36);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(445, 47);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 16);
+            this.label2.Size = new System.Drawing.Size(126, 18);
             this.label2.TabIndex = 3;
             this.label2.Text = "Nombre sector:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtbxNombreSector
             // 
-            this.txtbxNombreSector.Location = new System.Drawing.Point(574, 33);
+            this.txtbxNombreSector.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxNombreSector.Location = new System.Drawing.Point(634, 47);
             this.txtbxNombreSector.Name = "txtbxNombreSector";
-            this.txtbxNombreSector.Size = new System.Drawing.Size(189, 22);
+            this.txtbxNombreSector.Size = new System.Drawing.Size(182, 24);
             this.txtbxNombreSector.TabIndex = 4;
             // 
             // txtbxEmpleadoHasta
             // 
-            this.txtbxEmpleadoHasta.Location = new System.Drawing.Point(574, 91);
+            this.txtbxEmpleadoHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxEmpleadoHasta.Location = new System.Drawing.Point(634, 102);
             this.txtbxEmpleadoHasta.Name = "txtbxEmpleadoHasta";
-            this.txtbxEmpleadoHasta.Size = new System.Drawing.Size(189, 22);
+            this.txtbxEmpleadoHasta.Size = new System.Drawing.Size(182, 24);
             this.txtbxEmpleadoHasta.TabIndex = 8;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(405, 91);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(445, 105);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 16);
+            this.label3.Size = new System.Drawing.Size(166, 18);
             this.label3.TabIndex = 7;
             this.label3.Text = "Nº Empleados hasta:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -108,48 +111,51 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(27, 91);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(41, 105);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 16);
+            this.label4.Size = new System.Drawing.Size(165, 18);
             this.label4.TabIndex = 6;
             this.label4.Text = "NºEmpleados desde:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtbxEmpleadoDesde
             // 
-            this.txtbxEmpleadoDesde.Location = new System.Drawing.Point(193, 91);
+            this.txtbxEmpleadoDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxEmpleadoDesde.Location = new System.Drawing.Point(238, 105);
             this.txtbxEmpleadoDesde.Name = "txtbxEmpleadoDesde";
-            this.txtbxEmpleadoDesde.Size = new System.Drawing.Size(188, 22);
+            this.txtbxEmpleadoDesde.Size = new System.Drawing.Size(177, 24);
             this.txtbxEmpleadoDesde.TabIndex = 5;
             // 
             // datepickerFechaInicioDesde
             // 
+            this.datepickerFechaInicioDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datepickerFechaInicioDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datepickerFechaInicioDesde.Location = new System.Drawing.Point(193, 147);
+            this.datepickerFechaInicioDesde.Location = new System.Drawing.Point(238, 156);
             this.datepickerFechaInicioDesde.Name = "datepickerFechaInicioDesde";
             this.datepickerFechaInicioDesde.ShowCheckBox = true;
-            this.datepickerFechaInicioDesde.Size = new System.Drawing.Size(188, 22);
+            this.datepickerFechaInicioDesde.Size = new System.Drawing.Size(177, 24);
             this.datepickerFechaInicioDesde.TabIndex = 9;
             this.datepickerFechaInicioDesde.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // datepickerFechaInicioHasta
             // 
+            this.datepickerFechaInicioHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datepickerFechaInicioHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datepickerFechaInicioHasta.Location = new System.Drawing.Point(574, 143);
+            this.datepickerFechaInicioHasta.Location = new System.Drawing.Point(634, 151);
             this.datepickerFechaInicioHasta.Name = "datepickerFechaInicioHasta";
             this.datepickerFechaInicioHasta.ShowCheckBox = true;
-            this.datepickerFechaInicioHasta.Size = new System.Drawing.Size(189, 22);
+            this.datepickerFechaInicioHasta.Size = new System.Drawing.Size(182, 24);
             this.datepickerFechaInicioHasta.TabIndex = 10;
             this.datepickerFechaInicioHasta.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(27, 147);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(41, 155);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(143, 16);
+            this.label5.Size = new System.Drawing.Size(154, 18);
             this.label5.TabIndex = 11;
             this.label5.Text = "Fecha inicio desde:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -157,10 +163,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(405, 147);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(445, 155);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 16);
+            this.label6.Size = new System.Drawing.Size(150, 18);
             this.label6.TabIndex = 12;
             this.label6.Text = "Fecha inicio hasta:";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -168,10 +174,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(405, 192);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(445, 204);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 16);
+            this.label7.Size = new System.Drawing.Size(128, 18);
             this.label7.TabIndex = 16;
             this.label7.Text = "Fecha fin hasta:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -179,19 +185,20 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(27, 192);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(41, 204);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(122, 16);
+            this.label8.Size = new System.Drawing.Size(132, 18);
             this.label8.TabIndex = 15;
             this.label8.Text = "Fecha fin desde:";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(358, 230);
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(382, 250);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(110, 33);
             this.btnBuscar.TabIndex = 17;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -201,22 +208,24 @@
             // 
             this.dataGridERTE.AllowUserToAddRows = false;
             this.dataGridERTE.AllowUserToDeleteRows = false;
+            this.dataGridERTE.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridERTE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridERTE.Location = new System.Drawing.Point(41, 259);
+            this.dataGridERTE.Location = new System.Drawing.Point(44, 298);
             this.dataGridERTE.MultiSelect = false;
             this.dataGridERTE.Name = "dataGridERTE";
             this.dataGridERTE.ReadOnly = true;
             this.dataGridERTE.RowHeadersWidth = 51;
             this.dataGridERTE.RowTemplate.Height = 24;
             this.dataGridERTE.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridERTE.Size = new System.Drawing.Size(722, 150);
+            this.dataGridERTE.Size = new System.Drawing.Size(772, 168);
             this.dataGridERTE.TabIndex = 18;
             // 
             // btnNuevoErte
             // 
-            this.btnNuevoErte.Location = new System.Drawing.Point(219, 415);
+            this.btnNuevoErte.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoErte.Location = new System.Drawing.Point(254, 483);
             this.btnNuevoErte.Name = "btnNuevoErte";
-            this.btnNuevoErte.Size = new System.Drawing.Size(108, 23);
+            this.btnNuevoErte.Size = new System.Drawing.Size(116, 44);
             this.btnNuevoErte.TabIndex = 19;
             this.btnNuevoErte.Text = "Nuevo ERTE";
             this.btnNuevoErte.UseVisualStyleBackColor = true;
@@ -224,9 +233,10 @@
             // 
             // btnFinERTE
             // 
-            this.btnFinERTE.Location = new System.Drawing.Point(477, 415);
+            this.btnFinERTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinERTE.Location = new System.Drawing.Point(512, 483);
             this.btnFinERTE.Name = "btnFinERTE";
-            this.btnFinERTE.Size = new System.Drawing.Size(100, 23);
+            this.btnFinERTE.Size = new System.Drawing.Size(108, 44);
             this.btnFinERTE.TabIndex = 20;
             this.btnFinERTE.Text = "Fin ERTE";
             this.btnFinERTE.UseVisualStyleBackColor = true;
@@ -234,27 +244,29 @@
             // 
             // dtpFechaFinDesde
             // 
+            this.dtpFechaFinDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaFinDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaFinDesde.Location = new System.Drawing.Point(193, 192);
+            this.dtpFechaFinDesde.Location = new System.Drawing.Point(238, 206);
             this.dtpFechaFinDesde.Name = "dtpFechaFinDesde";
             this.dtpFechaFinDesde.ShowCheckBox = true;
-            this.dtpFechaFinDesde.Size = new System.Drawing.Size(188, 22);
+            this.dtpFechaFinDesde.Size = new System.Drawing.Size(177, 24);
             this.dtpFechaFinDesde.TabIndex = 21;
             // 
             // dtpFechaFinHasta
             // 
+            this.dtpFechaFinHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaFinHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaFinHasta.Location = new System.Drawing.Point(574, 190);
+            this.dtpFechaFinHasta.Location = new System.Drawing.Point(634, 204);
             this.dtpFechaFinHasta.Name = "dtpFechaFinHasta";
             this.dtpFechaFinHasta.ShowCheckBox = true;
-            this.dtpFechaFinHasta.Size = new System.Drawing.Size(189, 22);
+            this.dtpFechaFinHasta.Size = new System.Drawing.Size(182, 24);
             this.dtpFechaFinHasta.TabIndex = 22;
             // 
             // FrmERTES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(868, 550);
             this.Controls.Add(this.dtpFechaFinHasta);
             this.Controls.Add(this.dtpFechaFinDesde);
             this.Controls.Add(this.btnFinERTE);

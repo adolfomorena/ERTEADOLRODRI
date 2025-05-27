@@ -41,23 +41,23 @@
             this.dataGridEmpresas.AllowUserToDeleteRows = false;
             this.dataGridEmpresas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridEmpresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridEmpresas.Location = new System.Drawing.Point(12, 12);
+            this.dataGridEmpresas.Location = new System.Drawing.Point(22, 12);
             this.dataGridEmpresas.MultiSelect = false;
             this.dataGridEmpresas.Name = "dataGridEmpresas";
             this.dataGridEmpresas.ReadOnly = true;
             this.dataGridEmpresas.RowHeadersWidth = 51;
             this.dataGridEmpresas.RowTemplate.Height = 24;
             this.dataGridEmpresas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridEmpresas.Size = new System.Drawing.Size(776, 360);
+            this.dataGridEmpresas.Size = new System.Drawing.Size(821, 395);
             this.dataGridEmpresas.TabIndex = 0;
             this.dataGridEmpresas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridEmpresas_CellClick);
             this.dataGridEmpresas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridEmpresas_CellDoubleClick);
             // 
             // btnAnadir
             // 
-            this.btnAnadir.Location = new System.Drawing.Point(51, 389);
+            this.btnAnadir.Location = new System.Drawing.Point(60, 432);
             this.btnAnadir.Name = "btnAnadir";
-            this.btnAnadir.Size = new System.Drawing.Size(118, 38);
+            this.btnAnadir.Size = new System.Drawing.Size(163, 80);
             this.btnAnadir.TabIndex = 1;
             this.btnAnadir.Text = "Añadir";
             this.btnAnadir.UseVisualStyleBackColor = true;
@@ -65,9 +65,9 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(338, 389);
+            this.btnModificar.Location = new System.Drawing.Point(347, 432);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(113, 38);
+            this.btnModificar.Size = new System.Drawing.Size(158, 80);
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -75,9 +75,9 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(623, 389);
+            this.btnEliminar.Location = new System.Drawing.Point(632, 432);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(122, 38);
+            this.btnEliminar.Size = new System.Drawing.Size(167, 80);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -87,7 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(868, 550);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAnadir);
