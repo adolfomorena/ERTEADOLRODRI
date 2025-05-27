@@ -77,7 +77,30 @@ namespace ERTEADOLRODRI
 
         private void btnConsulta3_Click(object sender, EventArgs e)
         {
+            using (bd_ertesEntities objBD = new bd_ertesEntities())
+            {
+                var qConsulta3 = (from sect in objBD.SECTORES
+                                  let totalEmpresas = sect.EMPRESAS.Count()
+                                  orderby totalEmpresas descending
+                                  select new
+                                  {
+                                      sect.Descripcion,
+                                      TotalEmpresas = totalEmpresas
+                                  }).ToList();
 
+                if (qConsulta3.Any())
+                {
+                    int maxEmpresas = qConsulta3.Max(x => x.TotalEmpresas);
+
+                    var resultado = qConsulta3.Where(x => x.TotalEmpresas == maxEmpresas).ToList();
+
+                    dgvConsultas.DataSource = resultado;
+                }
+                else
+                {
+                    MessageBox.Show("No hay registros de Empresas de ningún Sector.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
 
         private void btnConsulta4_Click(object sender, EventArgs e)
