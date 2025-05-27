@@ -105,12 +105,13 @@ namespace ERTEADOLRODRI
 
         private void btnConsulta4_Click(object sender, EventArgs e)
         {
+            
 
         }
 
         private void btnConsulta5_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

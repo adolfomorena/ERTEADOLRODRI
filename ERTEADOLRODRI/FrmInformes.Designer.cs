@@ -45,7 +45,7 @@
             // btnConsulta1
             // 
             this.btnConsulta1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsulta1.Location = new System.Drawing.Point(53, 50);
+            this.btnConsulta1.Location = new System.Drawing.Point(34, 50);
             this.btnConsulta1.Name = "btnConsulta1";
             this.btnConsulta1.Size = new System.Drawing.Size(118, 50);
             this.btnConsulta1.TabIndex = 0;
@@ -56,7 +56,7 @@
             // btnConsulta5
             // 
             this.btnConsulta5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsulta5.Location = new System.Drawing.Point(674, 50);
+            this.btnConsulta5.Location = new System.Drawing.Point(713, 50);
             this.btnConsulta5.Name = "btnConsulta5";
             this.btnConsulta5.Size = new System.Drawing.Size(118, 50);
             this.btnConsulta5.TabIndex = 1;
@@ -67,7 +67,7 @@
             // btnConsulta4
             // 
             this.btnConsulta4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsulta4.Location = new System.Drawing.Point(519, 50);
+            this.btnConsulta4.Location = new System.Drawing.Point(542, 50);
             this.btnConsulta4.Name = "btnConsulta4";
             this.btnConsulta4.Size = new System.Drawing.Size(118, 50);
             this.btnConsulta4.TabIndex = 2;
@@ -78,7 +78,7 @@
             // btnConsulta3
             // 
             this.btnConsulta3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsulta3.Location = new System.Drawing.Point(360, 50);
+            this.btnConsulta3.Location = new System.Drawing.Point(371, 50);
             this.btnConsulta3.Name = "btnConsulta3";
             this.btnConsulta3.Size = new System.Drawing.Size(118, 50);
             this.btnConsulta3.TabIndex = 3;
@@ -89,7 +89,7 @@
             // btnConsulta2
             // 
             this.btnConsulta2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsulta2.Location = new System.Drawing.Point(208, 50);
+            this.btnConsulta2.Location = new System.Drawing.Point(204, 50);
             this.btnConsulta2.Name = "btnConsulta2";
             this.btnConsulta2.Size = new System.Drawing.Size(118, 50);
             this.btnConsulta2.TabIndex = 4;
@@ -103,12 +103,12 @@
             this.dgvConsultas.AllowUserToDeleteRows = false;
             this.dgvConsultas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultas.Location = new System.Drawing.Point(53, 132);
+            this.dgvConsultas.Location = new System.Drawing.Point(34, 132);
             this.dgvConsultas.Name = "dgvConsultas";
             this.dgvConsultas.ReadOnly = true;
             this.dgvConsultas.RowHeadersWidth = 51;
             this.dgvConsultas.RowTemplate.Height = 24;
-            this.dgvConsultas.Size = new System.Drawing.Size(739, 341);
+            this.dgvConsultas.Size = new System.Drawing.Size(797, 365);
             this.dgvConsultas.TabIndex = 5;
             // 
             // dsBDBindingSource
@@ -125,7 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 500);
+            this.ClientSize = new System.Drawing.Size(868, 539);
             this.Controls.Add(this.dgvConsultas);
             this.Controls.Add(this.btnConsulta2);
             this.Controls.Add(this.btnConsulta3);

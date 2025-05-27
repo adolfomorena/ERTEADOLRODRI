@@ -27,6 +27,7 @@ namespace ERTEADOLRODRI
             using (bd_ertesEntities objBD = new bd_ertesEntities())
             {
                 var qEmpresas = from emp in objBD.EMPRESAS
+                                // Filtra las empresas que no tienen al menos un ERTE activo
                                 where !emp.ERTES.Any(x => x.Fecha_fin == null)
                                 orderby emp.Nombre
                                 select emp;
