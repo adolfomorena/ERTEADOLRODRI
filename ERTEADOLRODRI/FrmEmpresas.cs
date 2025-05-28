@@ -61,41 +61,54 @@ namespace ERTEADOLRODRI
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (dataGridEmpresas.SelectedRows.Count == 0)
+            if (dataGridEmpresas.SelectedRows.Count > 0)
             {
-                MessageBox.Show("No ha seleccionado ninguna empresa", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                var cifSeleccionado = dataGridEmpresas.SelectedRows[0].Cells["CIF"].Value.ToString();
+                DialogResult rs = MessageBox.Show("¿Está seguro de que desea eliminar la empresa seleccionada?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (rs == DialogResult.Yes)
+                {
+                    using (bd_ertesEntities objBD = new bd_ertesEntities())
+                    {
+                        var empresaSeleccionada = (from emp in objBD.EMPRESAS
+                                                   where emp.Cif == cifSeleccionado
+                                                   select emp).FirstOrDefault();
+
+                        bool tieneERTES = empresaSeleccionada.ERTES.Any();
+                        bool tieneEmples = empresaSeleccionada.EMPLEADOS.Any();
+
+                        if (tieneERTES || tieneEmples)
+                        {
+                            string mensaje = "No se puede eliminar la empresa porque:\n";
+
+                            if (tieneERTES)
+                            {
+                                mensaje += "* Ha tenido o tiene uno o más ERTEs asociados.\n";
+                            }
+
+                            if (tieneEmples)
+                            {
+                                mensaje += "* Tiene empleados registrados.\n";
+                            }
+
+                            MessageBox.Show(mensaje, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                        {
+                            objBD.EMPRESAS.Remove(empresaSeleccionada);
+                            objBD.SaveChanges();
+
+                            MessageBox.Show("La empresa ha sido eliminda correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            CargarEmpresas();
+                        }
+                    }
+                }
             }
             else
             {
-                var empresa = dataGridEmpresas.SelectedRows[0].Cells["CIF"].Value.ToString();
-                using (bd_ertesEntities objBD = new bd_ertesEntities())
-                {
-                    var empresaSeleccionada = (from emp in objBD.EMPRESAS
-                                               where emp.Cif == empresa
-                                               select emp).FirstOrDefault();
-                    if (empresaSeleccionada == null)
-                    {
-                        MessageBox.Show("No se ha encontrado la empresa seleccionada", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                    DialogResult rs = MessageBox.Show("¿Estás seguro?", "Eliminar la empresa", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-                    if (rs == DialogResult.No)
-                    {
-                        return;
-                    }
-                    else
-                    {
-                        objBD.EMPRESAS.Remove(empresaSeleccionada);
-                        objBD.SaveChanges();
-                        MessageBox.Show("La empresa ha sido eliminada correctamente", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        CargarEmpresas();
-                    }
-                    
-                }
-
+                MessageBox.Show("No ha seleccionado ninguna empresa", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
         public void abrirFrmModEmpresa()
         {
             if (dataGridEmpresas.SelectedRows.Count == 0)
