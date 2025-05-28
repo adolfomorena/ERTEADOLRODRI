@@ -60,9 +60,11 @@ namespace ERTEADOLRODRI
             }
         }
         private void btnEliminar_Click(object sender, EventArgs e)
-        {
+        { 
+            // comprueba que se haya seleccionado una empresa
             if (dataGridEmpresas.SelectedRows.Count > 0)
             {
+                // obtenemos el cif para buscarla en la bd
                 var cifSeleccionado = dataGridEmpresas.SelectedRows[0].Cells["CIF"].Value.ToString();
                 DialogResult rs = MessageBox.Show("¿Está seguro de que desea eliminar la empresa seleccionada?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                 if (rs == DialogResult.Yes)
@@ -73,9 +75,11 @@ namespace ERTEADOLRODRI
                                                    where emp.Cif == cifSeleccionado
                                                    select emp).FirstOrDefault();
 
+                        // comprobamos si tiene ERTEs o empleados asociados
                         bool tieneERTES = empresaSeleccionada.ERTES.Any();
                         bool tieneEmples = empresaSeleccionada.EMPLEADOS.Any();
 
+                        // si los tiene se modifica el mensaje de error
                         if (tieneERTES || tieneEmples)
                         {
                             string mensaje = "No se puede eliminar la empresa porque:\n";
@@ -94,10 +98,11 @@ namespace ERTEADOLRODRI
                         }
                         else
                         {
+                            // si no tiene ERTEs ni empleados, se elimina
                             objBD.EMPRESAS.Remove(empresaSeleccionada);
                             objBD.SaveChanges();
 
-                            MessageBox.Show("La empresa ha sido eliminda correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("La empresa ha sido eliminada correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             CargarEmpresas();
                         }
                     }
